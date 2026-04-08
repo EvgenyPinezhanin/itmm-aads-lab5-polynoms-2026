@@ -1,0 +1,45 @@
+﻿// ННГУ, ИИТММ, Курс "Алгоритмы и структуры данных"
+//
+// polynom.h
+//
+// Copyright (c) Пинежанин Е.С.
+
+#ifndef __TPolynom_H__
+#define __TPolynom_H__
+
+#include <list>
+#include <string>
+
+struct TTerm
+{
+  double coeff;
+  int powers;
+};
+
+class TPolynom {
+private:
+	std::list<TTerm> data;
+
+public:
+	TPolynom();
+
+	bool IsCorrect() const; // возвращает коррекность полинома (false - если на вход подали некорректное выражение)
+
+	void SetPolynom(const std::string& polynom);
+
+	TPolynom& operator+(const TPolynom& polynom) const;
+	TPolynom& operator-(const TPolynom& polynom) const;
+
+	TPolynom& operator*(const TPolynom& polynom) const;
+	TPolynom& operator*(double coeff) const;
+
+	void Add(const std::string& monom) const; // Добавление монома
+	void Delete(size_t pos); // Удаление монома
+
+	double Calculate(double x, double y, double z) const;
+
+	friend std::istream& operator>>(std::istream& istr, TPolynom& polynom);
+	friend std::ostream& operator<<(std::ostream& ostr, const TPolynom& polynom);
+};
+
+#endif
