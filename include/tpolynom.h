@@ -27,11 +27,14 @@ public:
 
   void SetPolynom(const std::string& polynom);
 
-  TPolynom& operator+(const TPolynom &polynom) const;
-  TPolynom& operator-(const TPolynom &polynom) const;
+  TPolynom operator+(const TPolynom &polynom) const;
+  TPolynom operator-(const TPolynom &polynom) const;
 
-  TPolynom& operator*(const TPolynom &polynom) const;
-  TPolynom& operator*(double coeff) const;
+  TPolynom operator*(const TPolynom &polynom) const;
+  TPolynom operator*(double coeff) const;
+
+  bool operator==(const TPolynom &polynom) const;
+  bool operator!=(const TPolynom &polynom) const;
 
   void Add(const std::string& monom) const; // Добавление монома
   void Delete(size_t pos); // Удаление монома

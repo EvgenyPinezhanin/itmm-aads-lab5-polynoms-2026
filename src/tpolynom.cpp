@@ -16,19 +16,27 @@ void TPolynom::SetPolynom(const std::string& polynom) {
 
 }
 
-TPolynom& TPolynom::operator+(const TPolynom &polynom) const {
+TPolynom TPolynom::operator+(const TPolynom &polynom) const {
 
 }
 
-TPolynom& TPolynom::operator-(const TPolynom &polynom) const {
+TPolynom TPolynom::operator-(const TPolynom &polynom) const {
 
 }
 
-TPolynom& TPolynom::operator*(const TPolynom &polynom) const {
+TPolynom TPolynom::operator*(const TPolynom &polynom) const {
 
 }
 
-TPolynom& TPolynom::operator*(double coeff) const {
+TPolynom TPolynom::operator*(double coeff) const {
+
+}
+
+bool TPolynom::operator==(const TPolynom &polynom) const{
+  
+}
+
+bool TPolynom::operator!=(const TPolynom &polynom) const {
 
 }
 
