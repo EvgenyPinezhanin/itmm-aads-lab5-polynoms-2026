@@ -40,7 +40,7 @@ bool TPolynom::operator!=(const TPolynom &polynom) const {
 
 }
 
-void TPolynom::Add(const std::string& monom) const {
+void TPolynom::Add(const std::string& monom) {
 
 }
 

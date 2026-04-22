@@ -36,7 +36,7 @@ public:
   bool operator==(const TPolynom &polynom) const;
   bool operator!=(const TPolynom &polynom) const;
 
-  void Add(const std::string& monom) const; // Добавление монома
+  void Add(const std::string& monom); // Добавление монома
   void Delete(size_t pos); // Удаление монома
 
   double Calculate(double x, double y, double z) const;
